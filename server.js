@@ -1,9 +1,14 @@
 const express = require('express');
 require('dotenv').config()
+const path = require("node:path");
 const indexRouter = require('./routes/indexRouter');
 const newRouter = require("./routes/newRouter.js")
 
 const app = express()
+
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 // respond with "hello world" when a GET request is made to the homepage
 app.use("/",indexRouter);
