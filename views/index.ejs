@@ -6,7 +6,8 @@
     <title>mini-message-board</title>
   </head>
   <body>
-    <ul>
+    <h1>MINI MESSAGE BOARD</h1>
+    <main>
       <% messages.forEach((message) => { %>
       <div>
         <p><%= message.text %></p>
@@ -14,6 +15,6 @@
         <p><%= message.added %></p>
       </div>
       <% }) %>
-    </ul>
+    </main>
   </body>
 </html>
