@@ -13,9 +13,11 @@
         <p><%= message.text %></p>
         <p><%= message.user %></p>
         <p><%= message.added %></p>
+      <a href="/messages/<%= message.messageId %>"><button>OPEN</button> </a>
+
       </div>
       <% }) %>
     </main>
-    <a href="/new">new</a>
+    <a href="/new"><button>new message</button></a>
   </body>
 </html>

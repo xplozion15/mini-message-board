@@ -2,7 +2,8 @@ const express = require('express');
 require('dotenv').config()
 const path = require("node:path");
 const {indexRouter} = require('./routes/indexRouter');
-const newRouter = require("./routes/newRouter.js")
+const newRouter = require("./routes/newRouter.js");
+const messageRouter = require('./routes/messageRouter.js');
 
 const app = express()
 
@@ -15,6 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 // respond with "hello world" when a GET request is made to the homepage
 app.use("/", indexRouter);
 app.use("/new",newRouter)
+app.use("/messages",messageRouter);
+
 
 const PORT = process.env.PORT || 3000;
 
