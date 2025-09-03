@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mini-message-board</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
     <h1 class="heading">messageFlow</h1>
-   <div class="main-message-container">
-     <div class="message-details-div">
+    <div class="main-message-container">
+      <div class="message-details-div">
         <h2 class="message-details-subheading">Message Details</h2>
         <div class="message-details-container">
-        <p class="message-user"><%= messages[messageId].user %></p>
-        <p class="message-text"><%= messages[messageId].text %></p>
-        <p class="message-date"><%= messages[messageId].added %></p>
+          <p class="message-user"><%= messages[messageId].user %></p>
+          <p class="message-text"><%= messages[messageId].text %></p>
+          <p class="message-date"><%= messages[messageId].added %></p>
         </div>
+      </div>
+      <a href="/" class="go-back-button"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-left-icon lucide-arrow-left"
+        >
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" /></svg
+        >GO BACK</a
+      >
     </div>
-    <a href="/" class="go-back-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>GO BACK</a>
-   </div>
-</body>
+    <script>
+      document.querySelectorAll(".message-date").forEach((element) => {
+        const date = new Date(element.textContent);
+        element.textContent = date.toLocaleString("en-US", {
+          timeZoneName: "longGeneric", // show timezone like "GMT+5:30" or "AEST"
+          year: "numeric",
+          month: "short", // Jan, Feb, etc.
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+      });
+    </script>
+  </body>
 </html>

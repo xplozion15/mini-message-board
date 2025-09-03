@@ -25,6 +25,21 @@
       </div> </a>
       <% }) %>
     </main>
-    
+      <script>
+  document.querySelectorAll('.message-added-date').forEach(element => {
+    const date = new Date(element.textContent);
+    element.textContent = date.toLocaleString('en-US', {
+      timeZoneName:"longGeneric",   // show timezone like "GMT+5:30" or "AEST"
+      year: 'numeric',
+      month: 'short',           // Jan, Feb, etc.
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+  });
+</script>
   </body>
+  
+
 </html>
