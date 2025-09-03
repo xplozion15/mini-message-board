@@ -1,7 +1,7 @@
-const { messages } = require("../routes/indexRouter");
+const { messages } = require("../models/messages.js");
 
 function getMessages(req, res) {
-  res.render("index", { messages });
+  res.render("index", { messages: messages });
 }
 
 module.exports = { getMessages };
