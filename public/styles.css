@@ -1,0 +1,118 @@
+:root {
+  
+  --main-bg-color: #0f0f0f;
+  --secondary-bg-color : #1a1a1a; 
+  --secondary-bg-color : #1a1a1a; 
+  --third-bg-color : #363636;
+  --main-font-color : #5b73e9;
+  --white-color : #ffffff;
+}
+
+* {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+
+body {
+  background: linear-gradient(135deg, var(--main-bg-color) 0%, var(--secondary-bg-color) 100%);
+  width: 75vw;
+  margin: auto;
+}
+
+
+.heading {
+  text-align: center;
+  color: var(--main-font-color);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 0;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: clamp(1.2rem, 1.5vw, 2.3rem);
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+.new-message-button,.open-button,.go-back-button, .send-button {
+  margin: 1rem;
+  background-color: var(--third-bg-color);
+  color : var(--white-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--third-bg-color);
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;justify-content: center;
+  text-decoration: none;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+
+button:hover {
+  background-color: var(--main-font-color);
+}
+
+.message-instance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--third-bg-color);
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  gap: 0;
+}
+
+.message-user-name {
+  color: var(--main-font-color);
+}
+
+.username-and-timestamp-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.message-user-name {
+  font-weight: 800;
+  font-size: clamp(0.8rem, 1.2vw, 1.7rem);
+}
+
+.message-added-date {
+  font-weight: 300;
+  
+}
+
+.message-details-subheading {
+  text-align: center;
+}
+
+.message-details-container {
+  background-color: var(--third-bg-color);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+
+.message-user {
+  color: var(--main-font-color);
+}
+
+.go-back-button {
+  margin: start;
+}

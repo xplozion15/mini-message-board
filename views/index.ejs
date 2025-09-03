@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mini-message-board</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <h1>MINI MESSAGE BOARD</h1>
+    <h1 class="heading">messageFlow</h1>
+    <h2 class="sub-heading">Share your thoughts with the world</h2>
     <main>
+      <div class="icon-message-circle"></div>
+      <a href="/new"><button class="new-message-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>new message</button></a>
       <% messages.forEach((message) => { %>
-      <div>
+      
+      <a href="/messages/<%= message.messageId %>"><div class="message-instance-container">
+        <div class="username-and-timestamp-div">
+          <p class="message-user-name"><%= message.user %></p>
+        <p class="message-added-date"><%= message.added %></p>
+        </div>
         <p><%= message.text %></p>
-        <p><%= message.user %></p>
-        <p><%= message.added %></p>
-      <a href="/messages/<%= message.messageId %>"><button>OPEN</button> </a>
+        
+      
 
-      </div>
+      </div> </a>
       <% }) %>
     </main>
-    <a href="/new"><button>new message</button></a>
+    
   </body>
 </html>
