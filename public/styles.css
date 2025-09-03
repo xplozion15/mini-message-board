@@ -5,6 +5,7 @@
   --third-bg-color: #363636;
   --main-font-color: #5b73e9;
   --white-color: #ffffff;
+  --main-font-color-hover: #4661e5;
 }
 
 * {
@@ -14,11 +15,7 @@
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    var(--main-bg-color) 0%,
-    var(--secondary-bg-color) 100%
-  );
+  background-color: var(--main-bg-color);
   width: 75vw;
   margin: auto;
 }
@@ -44,7 +41,8 @@ a {
 .new-message-button,
 .open-button,
 .go-back-button,
-.send-button {
+.send-button,
+.cancel-button {
   margin: 1rem;
   background-color: var(--third-bg-color);
   color: var(--white-color);
@@ -61,8 +59,14 @@ a {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: var(--main-font-color);
+.new-message-button {
+  width: 10rem;
+  height: 2rem;
+}
+
+.new-message-button:hover {
+  background-color: var(--main-font-color-hover);
+  border: 2px solid var(--main-font-color-hover);
 }
 
 .message-instance-container {
@@ -112,9 +116,14 @@ button:hover {
 }
 
 .go-back-button {
-  margin: start;
+  width: 8rem;
+  align-self: flex-end;
+  margin: 1rem;
 }
 
+.go-back-button:hover {
+  background-color: var(--main-font-color-hover);
+}
 .form-div {
   display: flex;
   flex-direction: column;
@@ -145,14 +154,38 @@ textarea {
   border-radius: 0.5rem;
 }
 
-.send-button {
+.send-button,
+.cancel-button {
   margin: 0.5rem auto;
   background-color: var(--main-font-color);
-  width: 40%;
+  width: 10rem;
+}
+
+.send-button:hover,
+.cancel-button:hover {
+  background-color: var(--main-font-color-hover);
+  border: 2px solid var(--main-font-color-hover);
+}
+
+.form-button-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+  gap: 1rem;
 }
 
 .enter-message-heading {
   font-size: clamp(1rem, 2.1vw, 2.4rem);
   font-weight: 400;
   text-align: center;
+}
+
+.main-message-container {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
 }
