@@ -8,17 +8,19 @@
 </head>
 <body>
     <h1 class="heading">messageFlow</h1>
-    <h1>ENTER YOUR MESSAGE</h1>
+    <div class="form-div">
+        <h1 class="enter-message-heading">Enter your message</h1>
     <form method="post" action="/new">
-    <div>
+    <div class="name-input-div">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" required maxlength="40" minlength="3">
     </div>
-    <div>
+    <div class="message-input-div">
         <label for="message">message</label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message" id="message" rows="7" maxlength="70" minlength="5" required></textarea>
     </div>
     <button type="submit" class="send-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal-icon lucide-send-horizontal"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>Send</button>
     </form>
+    </div>
 </body>
 </html>

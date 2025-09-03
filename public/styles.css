@@ -2,7 +2,7 @@
   
   --main-bg-color: #0f0f0f;
   --secondary-bg-color : #1a1a1a; 
-  --secondary-bg-color : #1a1a1a; 
+  --secondary-bg-color2 : #2c2b2b; 
   --third-bg-color : #363636;
   --main-font-color : #5b73e9;
   --white-color : #ffffff;
@@ -115,4 +115,48 @@ button:hover {
 
 .go-back-button {
   margin: start;
+}
+
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30rem;
+  padding: 0.5rem;
+  margin: 5rem auto ;
+  background-color: var(--third-bg-color);
+  border: 2x solid var(--third-bg-color);
+  border-radius: 1rem;
+}
+
+.name-input-div,.message-input-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  height: 2rem;
+}
+
+
+input,textarea {
+  border: 2px solid var(--third-bg-color);
+  background-color: var(--secondary-bg-color2);
+  border-radius: 0.5rem;
+}
+
+
+.send-button {
+  margin: 0.5rem auto;
+  background-color: var(--main-font-color);
+  width: 40%;
+
+}
+
+.enter-message-heading {
+  font-size: clamp(1rem, 2.1vw, 2.4rem);
+  font-weight: 400;
+  text-align: center;
 }
