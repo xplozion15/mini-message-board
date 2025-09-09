@@ -6,7 +6,6 @@
   --main-font-color: #5b73e9;
   --white-color: #ffffff;
   --main-font-color-hover: #4661e5;
-
 }
 
 * {
@@ -107,13 +106,19 @@ a {
   background-color: var(--third-bg-color);
   border-radius: 1rem;
   padding: 0.3rem;
-  width: fit-content;
+  width: 25rem;
   margin: auto;
   margin-top: 3rem;
 }
 
 .message-user {
   color: var(--main-font-color);
+}
+
+.message-date {
+  font-size: 0.7rem;
+  font-weight: 400;
+  justify-self: flex-end;
 }
 
 .go-back-button {
@@ -197,5 +202,58 @@ textarea {
   width: fit-content;
 }
 
+@media (max-width: 480px) {
+  .message-added-date {
+    font-size: 2.7vw;
+    font-weight: 300;
+  }
 
+  .username-and-timestamp-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
 
+  .message-user-name {
+    font-weight: 800;
+  }
+
+  .sub-heading {
+    margin-bottom: 4rem;
+  }
+
+  .new-message-button {
+    width: 70%;
+    margin: auto;
+  }
+
+  .message-instance-container-main {
+    width: 100%;
+  }
+
+  .message-instance-container {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .message-details-container {
+    width: 100%;
+  }
+
+  .message-date {
+    font-size: 0.6rem;
+    justify-self: flex-end;
+  }
+
+  .form-div {
+    margin-top: 10rem;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+  }
+
+  textarea {
+    height: 5rem;
+  }
+}
