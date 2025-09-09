@@ -30,13 +30,11 @@ const postMessage = [
     };
 
     if (!errors.isEmpty()) {
-      return res
-        .status(400)
-        .render("form", {
-          errors: errors.array(),
-          name: name,
-          message: message,
-        });
+      return res.status(400).render("form", {
+        errors: errors.array(),
+        name: name,
+        message: message,
+      });
     } else if (errors.isEmpty()) {
       await db.postMessageToDb(messageObject);
       return res.render("index", {});

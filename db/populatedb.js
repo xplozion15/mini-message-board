@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (text, username, added)
 VALUES
-  ('Hey everyone, what''s up?', 'xplozion', '2025-09-09T03:37:11+05:30'),
-  ('Anyone working on the project today?', 'odin', '2025-09-09T03:40:22+05:30'),
-  ('I just fixed the bug in the login page!', 'mini xplozion', '2025-09-09T03:42:55+05:30');
+  ('Finally done with this mini project', 'xplozion', '2025-09-09T03:37:11+05:30'),
+  ('Anyone working on the project today?', 'Odin', '2025-09-09T03:40:22+05:30'),
+  ('Tell your cat I said pspspspspspsps', 'mini xplozion', '2025-09-09T03:42:55+05:30');
 `;
 
 async function main() {

@@ -1,9 +1,11 @@
 # Mini Message Board
-A simple message board web application built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**.
-- Live preview  - https://message-flow-mlm0.onrender.com/
 
+A simple message board web application built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**.
+
+- Live preview - https://message-flow-mlm0.onrender.com/
 
 ## Features
+
 - Create, read, and display messages.
 - Fully responsive design.
 - MVC architecture using controllers and views.
@@ -17,10 +19,11 @@ A simple message board web application built with **Node.js**, **Express**, **EJ
   - Responsive web design skills
 
 ## Technologies Used
+
 - **Backend:** Node.js, Express
 - **Frontend:** HTML, CSS, EJS templates
 - **Database:** PostgreSQL
 
 ## Credits
-- Icons by [Lucide Icons](https://lucide.dev/)
 
+- Icons by [Lucide Icons](https://lucide.dev/)

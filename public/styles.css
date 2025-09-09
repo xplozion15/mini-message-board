@@ -6,6 +6,7 @@
   --main-font-color: #5b73e9;
   --white-color: #ffffff;
   --main-font-color-hover: #4661e5;
+  --error-color: red;
 }
 
 * {
@@ -202,6 +203,10 @@ textarea {
   width: fit-content;
 }
 
+.error {
+  color: var(--error-color);
+}
+
 @media (max-width: 480px) {
   .message-added-date {
     font-size: 2.7vw;
@@ -220,7 +225,7 @@ textarea {
   }
 
   .sub-heading {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .new-message-button {
@@ -247,7 +252,7 @@ textarea {
   }
 
   .form-div {
-    margin-top: 10rem;
+    margin-top: 5rem;
     justify-self: center;
     align-self: center;
     width: 100%;
@@ -255,5 +260,10 @@ textarea {
 
   textarea {
     height: 5rem;
+  }
+
+  .error {
+    font-size: 0.7rem;
+    color: var(--error-color);
   }
 }
