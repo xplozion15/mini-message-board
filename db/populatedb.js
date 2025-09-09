@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 const { Client } = require("pg");
+require("dotenv").config();
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
@@ -20,7 +21,7 @@ async function main() {
   console.log("seeding...");
   const client = new Client({
     connectionString:
-      "postgresql://neondb_owner:npg_KOtcM2eQUVT3@ep-nameless-snow-a1aysqky-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+      process.env.DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
