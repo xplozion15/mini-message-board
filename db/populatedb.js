@@ -8,10 +8,10 @@ CREATE TABLE IF NOT EXISTS messages (
   messageId INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   text VARCHAR (255),
   user VARCHAR (255),
-  date VARCHAR (255),
+  added VARCHAR (255)
 );
 
-INSERT INTO messages (message) 
+INSERT INTO messages (text,user,added) 
 VALUES
 ('Hey everyone, what''s up?', 'xplozion', 'Sep 9, 2025, 03:37:11 PM India Standard Time'),
   ('Anyone working on the project today?', 'odin', 'Sep 9, 2025, 03:40:22 PM India Standard Time'),

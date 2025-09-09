@@ -2,7 +2,7 @@ const pool = require("./pool");
 
 
 async function  getMessagesFromDb() {
-    const {rows} = pool.query("SELECT * FROM messages");
+    const {rows} = await pool.query("SELECT * FROM messages");
     return rows;
 }
 
