@@ -6,6 +6,7 @@
   --main-font-color: #5b73e9;
   --white-color: #ffffff;
   --main-font-color-hover: #4661e5;
+
 }
 
 * {
@@ -195,3 +196,6 @@ textarea {
   align-items: center;
   width: fit-content;
 }
+
+
+

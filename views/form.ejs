@@ -18,23 +18,16 @@
             type="text"
             name="name"
             id="name"
-            required
-            maxlength="40"
-            minlength="3"
           />
         </div>
         <div class="message-input-div">
           <label for="message">message</label>
           <textarea
             name="message"
-            id="message"
-            rows="7"
-            maxlength="70"
-            minlength="5"
-            required
+            id="message"   
           ></textarea>
         </div>
-
+        <%- include("partials/errors.ejs") %>
         <div class="form-button-container">
           <a href="/" class="cancel-button">
             <svg
