@@ -1,6 +1,9 @@
 const { messages } = require("../models/messages.js");
+const db = require("../db/queries");
 
-function getMessages(req, res) {
+
+async function getMessages(req, res) {
+  const messages = await db.getMessagesFromDb();
   res.render("index", { messages: messages });
 }
 
