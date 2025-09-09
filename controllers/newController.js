@@ -1,18 +1,21 @@
-const { messages } = require("../models/messages.js");
+const db = require("../db/queries");
 
 function renderForm(req, res) {
-  res.render("form", { messages: messages });
+  res.render("form", {});
 }
 
-function postMessage(req, res) {
+async function postMessage(req, res) {
   const message = req.body.message;
   const name = req.body.name;
-  messages.push({
+
+  const messageObject = {
     text: message,
-    user: name,
+    username: name,
     added: new Date(),
-    messageId: messages.length,
-  });
+  };
+
+  await db.postMessageToDb(messageObject);
+
   res.redirect("/");
 }
 
