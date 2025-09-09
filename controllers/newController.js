@@ -37,7 +37,7 @@ const postMessage = [
       });
     } else if (errors.isEmpty()) {
       await db.postMessageToDb(messageObject);
-      return res.render("index", {});
+      return res.redirect("/");
     }
   },
 ];
