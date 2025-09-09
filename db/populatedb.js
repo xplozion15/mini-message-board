@@ -1,21 +1,19 @@
 #! /usr/bin/env node
-
 const { Client } = require("pg");
-
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   messageId INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   text VARCHAR (255),
-  user VARCHAR (255),
+  username VARCHAR (255),
   added VARCHAR (255)
 );
 
-INSERT INTO messages (text,user,added) 
+INSERT INTO messages (text, username, added)
 VALUES
-('Hey everyone, what''s up?', 'xplozion', 'Sep 9, 2025, 03:37:11 PM India Standard Time'),
-  ('Anyone working on the project today?', 'odin', 'Sep 9, 2025, 03:40:22 PM India Standard Time'),
-  ('I just fixed the bug in the login page!', 'mini xplozion', 'Sep 9, 2025, 03:42:55 PM India Standard Time');
+  ('Hey everyone, what''s up?', 'xplozion', '2025-09-09T03:37:11+05:30'),
+  ('Anyone working on the project today?', 'odin', '2025-09-09T03:40:22+05:30'),
+  ('I just fixed the bug in the login page!', 'mini xplozion', '2025-09-09T03:42:55+05:30');
 `;
 
 async function main() {
