@@ -36,7 +36,7 @@
       >
     </div>
   <script>
-  document.querySelectorAll('.message-added-date').forEach(element => {
+  document.querySelectorAll('.message-date').forEach(element => {
     const date = new Date(element.textContent);
     element.textContent = date.toLocaleString('en-US', {
       timeZoneName:"longGeneric",   // show timezone like "GMT+5:30" or "AEST"
